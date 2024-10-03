@@ -10,7 +10,11 @@
                 "body": [
                     {
                         "type": "TextBlock",
-                        "text": "Hello {{.name}}, this is a test webhook!"
+                        "text": "Description: {{.description}}"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "{{.origin}}"
                     }
                 ]
             }

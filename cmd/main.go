@@ -14,14 +14,14 @@ import (
 
 func data(w http.ResponseWriter, req *http.Request) {
 
-	dataTemplate, err := os.ReadFile("data.template")
+	dataTemplate, err := os.ReadFile("data/data.template")
 	check(err)
 	fmt.Print(string(dataTemplate))
 
 	tmpl, err := template.New("data").Parse(string(dataTemplate))
 	check(err)
 
-	dataJson, err := os.ReadFile("data.json")
+	dataJson, err := os.ReadFile("data/data.json")
 	check(err)
 	fmt.Print(string(dataJson))
 	var params map[string]interface{}
